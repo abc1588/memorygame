@@ -1,0 +1,140 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background: url("energyservice.jfif") cover left top;    
+}
+.header-area {
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    padding: 0;    
+    background-color: darkblue;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;    
+    color: white;
+    text-shadow: 0 0 5px #FF0000, 0 0 8px #0000FF;
+}
+.body-area {
+    height: 90%;
+    width: 100%;
+    margin: 0;
+    padding: 0; 
+    position: relative;
+    float:left;
+}
+.status-area {
+    height: 100%;
+    width: 15%;
+    background-color: lightgoldenrodyellow;
+    text-align: center;
+    color: darkblue;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    float: left;   
+}
+.stat-top { height: 60px;}
+.game-area{
+    height: 100%;
+    width: 85%;
+    background-color: lightgreen;
+    display: inline-block;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: 33.36%;
+    width: 16.66%;
+    background-color: white;
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    /* border: 1px solid cyan; */
+    float: left;
+}
+.card {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    float: left;
+    background-color: transparent;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px;
+}
+.front, .back {
+    height: 95%;
+    width: 95%;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.25s;
+    background-size: cover;
+    backface-visibility: hidden;
+}
+.card .front, .card.revealed .back {
+    transform: rotateY(180deg);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.card.revealed .front, .card .back {
+    transform: rotateY(0deg);
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.back{
+    cursor: pointer;
+}
+.button {
+  height: 10%;
+  width: 70%;
+  display: inline-block;
+  margin-top: 40px;
+  padding: 15px 25px;
+  font-size: 26px;
+  font-weight: bold;  
+  cursor: pointer;
+  text-align: top;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.value {
+    color: darkgreen;
+    font-size: 38px;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+.winner{
+    height: 60%;
+    width: 70%;
+    margin: 100px 150px;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/winner.jfif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    filter: contrast(1.5) saturate(5) brightness(1.5); 
+    z-index: 1;
+    transform: translateY(4px); 
+}
+
