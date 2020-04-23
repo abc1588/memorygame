@@ -4,15 +4,16 @@ body{
     position: relative;
     margin: 0;
     padding: 0;
-    background: url("energyservice.jfif") cover left top;    
+    /* background: url("energyservice.jfif") cover left top;    */
 }
 .header-area {
     height: 10%;
     width: 100%;
     margin: 0;
     padding: 0;    
-    background-color: darkblue;
+    background-color: darkblue;   
     text-align: center;
+    vertical-align: middle;
     font-size: 40px;
     font-weight: bold;    
     color: white;
@@ -138,3 +139,32 @@ body{
     transform: translateY(4px); 
 }
 
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 900px) {
+    .header-area { font-size: 1.5em; line-height: 2.5;  }
+    .game-area {  width: 85%;     }
+    .status-area { font-size: .9em;    }    
+    .button {  height: 5%; width: 75%; font-size: 1.1em; padding: 0;  }
+    .value { font-size: 1.2em; }
+    .winner { margin: auto;  }
+}
+
+@media screen and (max-width: 750px) {
+    .header-area { font-size: 1em; line-height: 2.5;  }
+    .game-area {  width: 85%;     }
+    .status-area { font-size: .7em;    }    
+    .button {  height: 5%; width: 75%; font-size: 1em; padding: 0;  }
+    .value { font-size: 1.2em; }
+    .winner { margin: auto;  }
+}
+
+@media screen and (max-width: 600px) {
+    .header-area { font-size: 1em; line-height: 2.5;  }
+    .game-area {  width: 85%;     }
+    .status-area { font-size: .6em;    }    
+    .button {  height: 5%; width: 75%; font-size: .7em; padding: 0;  }
+    .value { font-size: 1em; font-weight: normal; }
+    .winner { margin: auto;  }
+}
